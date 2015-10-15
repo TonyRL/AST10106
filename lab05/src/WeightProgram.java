@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class WeightProgram
+ public class WeightProgram
 {
 	public static void main(String[] args)
 	{
@@ -31,9 +31,8 @@ public class WeightProgram
 		System.out.println("5g-weight: " + totalWeight /5);
 		totalWeight  = totalWeight % 5;
 		
-		System.out.println("1g-weight: " + totalWeight /1);
-		totalWeight = totalWeight % 1;
-		
+		System.out.println("1g-weight: " + totalWeight);
+
 	}
 
 }
