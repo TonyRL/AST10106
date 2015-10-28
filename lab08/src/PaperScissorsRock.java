@@ -28,8 +28,9 @@ public class PaperScissorsRock
             System.exit(0);
         }
 
-        Random randomGen = new Random();
-        int compOption = randomGen.nextInt(3);
+        //Random randomGen = new Random();
+        //int compOption = randomGen.nextInt(3);
+        int compOption = 2;
 
         if(compOption == 0)
             System.out.println("Computer picks paper");
@@ -38,11 +39,11 @@ public class PaperScissorsRock
         else if(compOption == 2)
             System.out.println("Computer picks rock");
 
-        if((playerOption >= compOption) && (playerOption !=0 || playerOption != compOption))
+        if((playerOption > compOption) && (playerOption !=0 || playerOption != compOption))
             System.out.println("Player wins");
         else if((playerOption == 0 && compOption == 2) && playerOption != compOption)
             System.out.println("Player wins");
-        else if((compOption >= playerOption) && (compOption !=0 || playerOption != compOption))
+        else if((compOption > playerOption) && (compOption !=0 || playerOption != compOption))
             System.out.println("Computer wins");
         else if((compOption == 0 && playerOption == 2) && playerOption != compOption)
             System.out.println("Computer wins");
