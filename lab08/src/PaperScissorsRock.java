@@ -1,11 +1,8 @@
-/**
- * Created by Tony on 29/10/2015.
- */
+
 import java.util.Scanner;
 import java.util.Random;
 public class PaperScissorsRock
 {
-
     public static void main(String[] args)
     {
         Scanner input = new Scanner(System.in);
@@ -28,10 +25,9 @@ public class PaperScissorsRock
             System.exit(0);
         }
 
-        //Random randomGen = new Random();
-        //int compOption = randomGen.nextInt(3);
-        int compOption = 2;
-
+        Random randomGen = new Random();
+        int compOption = randomGen.nextInt(3);
+      
         if(compOption == 0)
             System.out.println("Computer picks paper");
         else if(compOption == 1)
@@ -39,7 +35,9 @@ public class PaperScissorsRock
         else if(compOption == 2)
             System.out.println("Computer picks rock");
 
-        if((playerOption > compOption) && (playerOption !=0 || playerOption != compOption))
+        if (playerOption == 1 && compOption == 0)
+            System.out.println("Player wins");
+        else if ((playerOption > compOption) && (compOption != 0 && playerOption != compOption))
             System.out.println("Player wins");
         else if((playerOption == 0 && compOption == 2) && playerOption != compOption)
             System.out.println("Player wins");
@@ -49,10 +47,6 @@ public class PaperScissorsRock
             System.out.println("Computer wins");
         else if(compOption == playerOption)
             System.out.println("Draw");
-
-
-
-
     }
 
 }
